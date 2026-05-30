@@ -2,11 +2,9 @@ import requests
 from twilio.rest import Client
 import os
 
-
 OWM_endpoint = "https://api.openweathermap.org/data/2.5/forecast"
 api_key = os.getenv("API_KEY")
-print(f"api_key: {api_key}"
-      f"")
+
 account_sid = os.getenv("TWILIO")
 auth_token = os.getenv("AUTH_TOKEN")
 to_phone = os.getenv("TO_PHONE")
