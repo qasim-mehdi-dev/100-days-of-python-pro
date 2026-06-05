@@ -1,16 +1,34 @@
-## Day 42 - Birthday Invitation Webpage
+# Birthday Invite Website
 
-A simple birthday invitation built with HTML covering:
+A simple HTML project built during Day 42 of Angela Yu's 100 Days of Code course.
 
-- Headings (h1, h2, h3)
-- Ordered and unordered lists
-- Nested lists
-- Image elements with alt text
-- Anchor elements with external links
+## Features
 
-### Concepts Learned
+- HTML headings
+- Images using the `<img>` tag
+- Links using the `<a>` tag
+- Unordered lists
+- Basic webpage structure
+
+## Technologies Used
+
+- HTML5
+
+## What I Learned
+
 - HTML boilerplate structure
-- Semantic heading hierarchy
-- List nesting and indentation
-- Linking external images and URLs
-- Accessibility with alt attributes
+- Ordered and unordered lists
+- Nesting and indentation
+- Anchor elements
+- Image elements
+- Alt text for accessibility
+
+## Project Preview
+
+A simple birthday invitation webpage containing:
+
+- Event title
+- Event date
+- Birthday cake image
+- Items to bring
+- Google Maps location link
