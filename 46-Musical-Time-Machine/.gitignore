@@ -1,0 +1,7 @@
+# Ignore authentication token files
+browser.json
+auth_setup.py
+
+# Ignore PyCharm configuration environments
+.idea/
+__pycache__/
