@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe & Wifi API Documentation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 { border-bottom: 2px solid #dee2e6; padding-bottom: 10px; color: #212529; }
+        h2 { margin-top: 30px; color: #495057; }
+        .endpoint {
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-left: 5px solid #6c757d;
+        }
+        .get { border-left-color: #28a745; }
+        .post { border-left-color: #007bff; }
+        .patch { border-left-color: #ffc107; }
+        .delete { border-left-color: #dc3545; }
+        .badge {
+            display: inline-block;
+            padding: 0.25em 0.4em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+            color: #fff;
+            margin-right: 10px;
+        }
+        .badge-get { background-color: #28a745; }
+        .badge-post { background-color: #007bff; }
+        .badge-patch { background-color: #ffc107; color: #212529; }
+        .badge-delete { background-color: #dc3545; }
+        code {
+            background-color: #f1f3f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 85%;
+        }
+        pre {
+            background: #212529;
+            color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Cafe & Wifi API Documentation</h1>
+    <p>Welcome to the Cafe & Wifi API. Use the following endpoints to interact with our database of remote-work-friendly spots.</p>
+
+    <h2>Available Endpoints</h2>
+
+    <div class="endpoint get">
+        <h3><span class="badge badge-get">GET</span> /random</h3>
+        <p>Fetch a single random cafe from the database.</p>
+        <p><strong>Response (200 OK):</strong></p>
+        <pre>{
+  "cafe": {
+    "id": 1,
+    "name": "Cafe Nero",
+    ...
+  }
+}</pre>
+    </div>
+
+    <div class="endpoint get">
+        <h3><span class="badge badge-get">GET</span> /all</h3>
+        <p>Returns a list of all cafes currently stored in the system.</p>
+    </div>
+
+    <div class="endpoint get">
+        <h3><span class="badge badge-get">GET</span> /search</h3>
+        <p>Search for cafes by location name.</p>
+        <p><strong>URL Parameters:</strong> <code>loc</code> (e.g., <code>/search?loc=London</code>)</p>
+    </div>
+
+    <div class="endpoint post">
+        <h3><span class="badge badge-post">POST</span> /add</h3>
+        <p>Add a brand new cafe to the database.</p>
+        <p><strong>Body Data (x-www-form-urlencoded):</strong></p>
+        <ul>
+            <li><code>name</code> (String)</li>
+            <li><code>map_url</code> (String)</li>
+            <li><code>img_url</code> (String)</li>
+            <li><code>location</code> (String)</li>
+            <li><code>seats</code> (String)</li>
+            <li><code>has_toilet</code> (Boolean: "True"/"False")</li>
+            <li><code>has_wifi</code> (Boolean: "True"/"False")</li>
+            <li><code>has_sockets</code> (Boolean: "True"/"False")</li>
+            <li><code>can_take_calls</code> (Boolean: "True"/"False")</li>
+            <li><code>coffee_price</code> (String)</li>
+        </ul>
+    </div>
+
+    <div class="endpoint patch">
+        <h3><span class="badge badge-patch">PATCH</span> /update-price/&lt;cafe_id&gt;</h3>
+        <p>Update the coffee price of an existing cafe entry.</p>
+        <p><strong>URL Parameters:</strong> <code>new_price</code> (e.g., <code>/update-price/19?new_price=£3.40</code>)</p>
+    </div>
+
+    <div class="endpoint delete">
+        <h3><span class="badge badge-delete">DELETE</span> /report-closed/&lt;cafe_id&gt;</h3>
+        <p>Remove a cafe entry from the database. Requires a valid security key.</p>
+        <p><strong>URL Parameters:</strong> <code>api-key</code> (e.g., <code>/report-closed/17?api-key=TopSecretAPIKey</code>)</p>
+    </div>
+
+</body>
+</html>
