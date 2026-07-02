@@ -1,0 +1,10 @@
+Flask
+Flask-SQLAlchemy
+Flask-Login
+Flask-Bootstrap5
+Flask-CKEditor
+Flask-WTF
+WTForms
+python-dotenv
+gunicorn
+psycopg2-binary
