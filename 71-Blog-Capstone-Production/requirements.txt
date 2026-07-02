@@ -1,7 +1,7 @@
 Flask
 Flask-SQLAlchemy
 Flask-Login
-Flask-Bootstrap5
+Bootstrap-Flask
 Flask-CKEditor
 Flask-WTF
 WTForms
