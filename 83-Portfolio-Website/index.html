@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qasim Mehdi | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header data-bs-theme="dark">
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong class="fs-4">QM</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!-- Collapsible Menu Content -->
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-white-50">Transitioning from commerce to the tech sector. Building logic-driven structures, core Python algorithms, and clean data architectures.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Navigation</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#hero" class="text-white-50 text-decoration-none">Home</a></li>
+                            <li><a href="#projects" class="text-white-50 text-decoration-none">Projects</a></li>
+                            <li><a href="https://github.com/qasim-mehdi-dev" target="_blank" class="text-white-50 text-decoration-none">GitHub Profile</a></li>
+                            <li><a href="mailto:qasim.dev@proton.me" class="text-white-50 text-decoration-none">Email Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="container-fluid">
+            <div class="jumbotron-custom-overlay">
+                <h1 class="fw-bold text-white">Hi, I'm Qasim Mehdi</h1>
+                <p class="lead text-white-50">Aspiring Programmer & Tech Enthusiast</p>
+                <p>
+                    <a href="#projects" class="btn btn-primary btn-md mx-1 px-4">View My Work</a>
+                    <a href="https://github.com/qasim-mehdi-dev" target="_blank" class="btn btn-outline-light btn-md mx-1 px-4">Let's Connect</a>
+                </p>
+            </div>
+        </section>
+
+        <div id="projects" class="album py-5 bg-body-tertiary">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">Featured Projects</h2>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    
+                    <!-- Card 1: Multivariable Regression -->
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <!-- Real Image replaces color placeholder -->
+                            <img src="./math.jpg" alt="Math Formulas" class="card-img-top card-project-img">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h5 class="card-title fw-bold fs-5 mb-2">Multivariable Regression</h5>
+                                <p class="card-text text-muted">A predictive valuation model evaluating historical housing stats utilizing train-test splits and log transforms.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="btn-group">
+                                        <a href="https://github.com/qasim-mehdi-dev/100-days-of-python-pro/tree/main/81-Multivariable-Regression" target="_blank" class="btn btn-sm btn-outline-secondary text-decoration-none">View Code</a>
+                                    </div>
+                                    <small class="text-body-secondary font-monospace">Python</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Handwashing Data Analysis -->
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <!-- Real Image replaces color placeholder -->
+                            <img src="./dashboard.jpg" alt="Data Dashboard" class="card-img-top card-project-img">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h5 class="card-title fw-bold fs-5 mb-2">Data Analysis</h5>
+                                <p class="card-text text-muted">A comparative time-series visualization engine analyzing the statistical impacts of handwashing metrics.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="btn-group">
+                                        <a href="https://github.com/qasim-mehdi-dev/100-days-of-python-pro/tree/main/80-Dr-Simmelweis-Analysis" target="_blank" class="btn btn-sm btn-outline-secondary text-decoration-none">View Code</a>
+                                    </div>
+                                    <small class="text-body-secondary font-monospace">Pandas</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Morse Code Converter -->
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <!-- Real Image replaces color placeholder -->
+                            <img src="./code.jpg" alt="Python Code" class="card-img-top card-project-img">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h5 class="card-title fw-bold fs-5 mb-2">Morse Code Converter</h5>
+                                <p class="card-text text-muted">A pure Python command-line conversion application featuring case-insensitive processing loops.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="btn-group">
+                                        <a href="https://github.com/qasim-mehdi-dev/100-days-of-python-pro/tree/main/82-Morse-Code-Converter" target="_blank" class="btn btn-sm btn-outline-secondary text-decoration-none">View Code</a>
+                                    </div>
+                                    <small class="text-body-secondary font-monospace">Logic</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-body-secondary py-5 bg-dark" data-bs-theme="dark">
+        <div class="container">
+            <p class="float-end mb-1">
+                <a href="#" class="text-decoration-none text-white-50">Back to top ↑</a>
+            </p>
+            <p class="mb-1">Portfolio template customized by Qasim Mehdi.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
