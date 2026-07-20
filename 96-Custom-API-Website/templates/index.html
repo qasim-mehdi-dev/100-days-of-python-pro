@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border-color: #8dc63f; /* CoinGecko Green */
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #8dc63f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background-color: #7ab332;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <h2>Crypto Price Search</h2>
+        
+        <!-- Form submits to your Flask search route -->
+        <form action="/search" method="GET" class="search-box">
+            <input 
+                type="text" 
+                name="coin_id" 
+                placeholder="Enter coin ID (e.g., bitcoin, ethereum)" 
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Display results here if passed from Flask -->
+        {% if coin_data %}
+            <div style="margin-top: 20px;">
+                <h3>{{ coin_data.name }} ({{ coin_data.symbol | upper }})</h3>
+                <p>Price: ${{ coin_data.usd_price }} USD</p>
+            </div>
+        {% elif error %}
+            <div style="margin-top: 20px; color: red;">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
