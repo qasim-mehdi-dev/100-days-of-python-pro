@@ -1,3 +1,11 @@
+# IDE & Local Workspace Folders
+.idea/
+.vscode/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.env
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
